@@ -37,10 +37,11 @@ This is a simple tool to delete all your posts from [bsky](https://www.bsky.io).
     bun start <identifier> <password> <server>
     ```
 
-#äTODO:
-Docker
-docker build -t t0biii/bskjy-clean:latest .
-docker run --env-file env.list t0biii/bskjy-clean
+## Docker
+```bash
+docker build -t t0biii/bskjy-clean:latest .  
+docker run --env-file env.list t0biii/bskjy-clean  
+```
 
 ### Arguments
 
