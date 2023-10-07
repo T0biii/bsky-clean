@@ -30,6 +30,10 @@ This is a simple tool to delete all your posts from [bsky](https://www.bsky.io).
 -  🚀 Run 
 
     ```bash
+    bun start <identifier> <password>
+    ```
+    or with Server
+    ```bash
     bun start <identifier> <password> <server>
     ```
 
