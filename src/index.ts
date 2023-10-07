@@ -1,12 +1,20 @@
 import { BskyAgent } from "@atproto/api";
 
-if (Bun.argv.length !== 4) {
-    throw new Error(`Invalid argument length. Needs <identifier> <password>`)
+if (Bun.argv.length < 4 || Bun.argv.length > 5) {
+    throw new Error(`Invalid argument length. Needs <identifier> <password> <server>`)
 }
+
+let SERVER
+if (Bun.argv.length == 5){
+    SERVER = Bun.argv[4];
+}else{
+    SERVER = "bsky.social";
+}
+
 const USER_IDENTIFIER = Bun.argv[2];
 const PASSWORD = Bun.argv[3];
 
-const agent = new BskyAgent({ service: "https://bsky.social" });
+const agent = new BskyAgent({ service: "https://"+SERVER });
 await agent.login({
     identifier: USER_IDENTIFIER,
     password: PASSWORD,
