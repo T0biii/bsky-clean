@@ -11,6 +11,9 @@ This is a simple tool to delete all your posts from [bsky](https://www.bsky.io).
 -  🔑 Please generate an App Password via ``Settings`` > ``Advanced`` > ``App Passwords`` to login.
 
 - 📦 Install [bun](https://bun.sh/docs/installation)
+    ```bash
+    npm install -g bun
+    ```
 
 - 🌐 Get `bsky-clean` with git
 
@@ -29,6 +32,10 @@ This is a simple tool to delete all your posts from [bsky](https://www.bsky.io).
     ```bash
     bun start <identifier> <password>
     ```
+    or with Server
+    ```bash
+    bun start <identifier> <password> <server>
+    ```
 
 ### Arguments
 
@@ -36,6 +43,7 @@ This is a simple tool to delete all your posts from [bsky](https://www.bsky.io).
 |--|--|--|
 |🔗 ``<identifier>``| Your bsky identifier | lommi.is|
 |🔑 ``<password>``| The App password you generated in step 1 | password123|
+|💻 ``<server>``| Your bsky Server (Sandbox only atm)| bsky.social|
 
 - 🕵️‍♂️ Lastly: Be safe and paranoid and delete your app password.
 
